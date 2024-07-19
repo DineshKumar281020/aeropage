@@ -1,8 +1,8 @@
 .navbar{
-    z-index: 99%;
-    position: fixed;
+   position: fixed;
     top:0px;
     width: 100%;
+    z-index: 99;
 }
 
 .nav-item{
@@ -12,21 +12,13 @@
 
 
 /*HEADER*/
-
-.container{
-    padding-top: 100px;
-}
-
-.img-fluid{
-    padding-top: 50px;
-}
-
 span{
     color: orange;
 }
 
-
-
+.hello{
+    padding-top: 20%;
+}
 
 /*FEATURES*/
 .card-img-top{
@@ -35,11 +27,9 @@ span{
     padding-left: 20px;
 }
 
-
-
 .badge{
    border-radius: 7rem;
-    background-color: #ff590c6c;
+    background-color: #ea580c33;
     color:#f56642 ;
     border-color: #f56642;
     border-style: solid;
