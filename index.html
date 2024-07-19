@@ -116,18 +116,28 @@
                 <img src="assets/svg/faq.svg" class="card-img-to" alt="Faq">
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <div class="dropdown-toggle card-body" data-bs-toggle="dropdown">How Can Digital Marketing Benefit My Business?</div>
-                </div>
-                <div class="card">
-                    <div class="card-body dropdown-toggle" data-bs-toggle="dropdown">Do I Need To Have A Large Budget For Digital Marketing?</div>
-                </div>
-                <div class="card">
-                    <div class="card-body dropdown-toggle" data-bs-toggle="dropdown">What Services Does [Your Digital Agency] offer?</div>
-                </div>
-                <div class="card">
-                    <div class="card-body dropdown-toggle" data-bs-toggle="dropdown">Can Help With Content Creation and Social Media Management?</div>
-                </div>
+                <div class="accordion-single js-acc-single">
+                    <div class="accordion-single-item js-acc-item is-open">
+                      <h2 class="accordion-single-title js-acc-single-trigger">Question 1</h2>
+                      <div class="accordion-single-content">
+                        <p>This is an Answer 1</p>
+                      </div>
+                    </div>
+                    <div class="accordion-single-item js-acc-item">
+                      <h2 class="accordion-single-title js-acc-single-trigger">Question 2</h2>
+                      <div class="accordion-single-content">
+                        <p>This is an Answer 2</p>
+                      </div>
+                    </div>
+                    <div class="accordion-single-item js-acc-item">
+                      <h2 class="accordion-single-title js-acc-single-trigger">Question 3</h2>
+                      <div class="accordion-single-content">
+                        <p>This is an Answer 3</p>
+                      </div>
+                    </div>
+                  </div><!-- accordion-single -->
+                    
+                  
             </div>
         </div>
     </section>
@@ -248,7 +258,7 @@
             <div class="col-md-3">
                 <h1 class="footer-logo">Aero<span>Page</span></h1>
                 <p>Integer auctor aliquet martor, sed lorem malesuada eros blandit eget. Proin lacinia mortoc id odio vestibulum.</p>
-                <input type="email" multiple placeholder="Enter mail id">
+                <input type="email" multiple placeholder="Enter E-Mail id">
             </div>
             <div class="col-md-3">
                 <h3 class="footer-title">Company</h3>
@@ -313,6 +323,23 @@
     //     }
     // }
 });
+
+const accSingleTriggers = document.querySelectorAll('.js-acc-single-trigger');
+
+accSingleTriggers.forEach(trigger => trigger.addEventListener('click', toggleAccordion));
+
+function toggleAccordion() {
+  const items = document.querySelectorAll('.js-acc-item');
+  const thisItem = this.parentNode;
+
+  items.forEach(item => {
+    if (thisItem == item) {
+      thisItem.classList.toggle('is-open');
+      return;
+    }
+    item.classList.remove('is-open');
+  });
+}
     </script>
 
 </body>
